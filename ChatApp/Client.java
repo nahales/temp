@@ -10,7 +10,7 @@ public class Client {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		System.out.print("Enter your name: ");
 		Scanner sc = new Scanner(System.in);
-    String name = sc.nextLine();
+   		 String name = sc.nextLine();
 		/* InputStreamReader converts byte streams to character streams */
 		/* BufferedReader class reads text from a character-input stream, buffering characters
 		so as to provide for the efficient reading of characters, arrays, and lines */
@@ -25,12 +25,12 @@ public class Client {
 			/* readLine() is a member of the BufferedReader class that reads a string from the keyboard */
 			String message = input.readLine();
 			output.println(name + ": " + message);
-		if(message.equals("exit")) {
-			System.out.println("Exiting from server...");
-			break;
+			if(message.equals("exit")) {
+				System.out.println("Exiting from server...");
+				break;
+			}
 		}
 	}
-}
 
 	public static Socket getSocket() throws UnknownHostException, IOException {
 		Socket socket = new Socket("localhost", 8000);
