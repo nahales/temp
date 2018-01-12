@@ -46,7 +46,7 @@ public class Server {
 					String[] inputArr = clientInput.split(": ", 2);
 					String username = inputArr[0].toString();
 					String message = inputArr[1].toString();
-					if(message.equals("exit")) {
+					if(message.equals("exit") || message.equals("null")) {
 						System.out.println("User '" + username +"' from " + socket + " disconnected at " + new Date());
 						break;
 					}
