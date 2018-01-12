@@ -6,6 +6,8 @@ import java.net.Socket;
 import java.util.Date;
 
 public class Server {
+	/* Static variable is a variable which belongs to the class and not to object (instance) - No encapsulation */
+	/* Final variables are initialized only once, at the time of declaration and connot be reassigned later */
 	public static final int PORT = 8000;
 
 	public static void main(String[] args) throws IOException {
